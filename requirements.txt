@@ -1,0 +1,7 @@
+pandas
+pandasai
+streamlit
+pyyaml
+google-generativeai
+openpyxl
+pandasai[excel]
