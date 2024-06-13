@@ -1,0 +1,180 @@
+{
+  "TableViewConfig": {
+    "Resources": {
+      "Term": {
+        "DisplayName": {
+          "name": "DisplayName"
+        },
+        "Domain": {
+          "Name": {
+            "name": "Domain_Name"
+          },
+          "Id": {
+            "name": "Domain_Id"
+          }
+        },
+        "Status": {
+          "Signifier": {
+            "name": "Status_Name"
+          },
+          "Id": {
+            "name": "Status_Id"
+          }
+        },
+        "Relation": [
+          {
+            "typeId": "00000000-0000-0000-0000-000000007008",
+            "type": "TARGET",
+            "Id": {
+              "name": "TargetRelation_00000000-0000-0000-0000-000000007008_Id"
+            },
+            "Source": {
+              "DisplayName": {
+                "name": "TargetRelation_00000000-0000-0000-0000-000000007008_Source_DisplayName"
+              },
+              "Signifier": {
+                "name": "TargetRelation_00000000-0000-0000-0000-000000007008_Source_FullName"
+              },
+              "Id": {
+                "name": "TargetRelation_00000000-0000-0000-0000-000000007008_Source_Id"
+              }
+            }
+          },
+          {
+            "typeId": "00000000-0000-0000-0000-000000007007",
+            "type": "TARGET",
+            "Id": {
+              "name": "TargetRelation_00000000-0000-0000-0000-000000007007_Id"
+            },
+            "Source": {
+              "DisplayName": {
+                "name": "TargetRelation_00000000-0000-0000-0000-000000007007_Source_DisplayName"
+              },
+              "Signifier": {
+                "name": "TargetRelation_00000000-0000-0000-0000-000000007007_Source_FullName"
+              },
+              "Id": {
+                "name": "TargetRelation_00000000-0000-0000-0000-000000007007_Source_Id"
+              }
+            }
+          },
+          {
+            "typeId": "00000000-0000-0000-0000-000000007038",
+            "type": "SOURCE",
+            "Id": {
+              "name": "SourceRelation_00000000-0000-0000-0000-000000007038_Id"
+            },
+            "Target": {
+              "DisplayName": {
+                "name": "SourceRelation_00000000-0000-0000-0000-000000007038_Target_DisplayName"
+              },
+              "Signifier": {
+                "name": "SourceRelation_00000000-0000-0000-0000-000000007038_Target_FullName"
+              },
+              "Id": {
+                "name": "SourceRelation_00000000-0000-0000-0000-000000007038_Target_Id"
+              }
+            }
+          }
+        ],
+        "StringAttribute": [
+          {
+            "labelId": "00000000-0000-0000-0000-000000000202",
+            "LongExpression": {
+              "name": "StringAttribute_00000000-0000-0000-0000-000000000202_Value", "stripHtml": true
+            },
+            "Id": {
+              "name": "StringAttribute_00000000-0000-0000-0000-000000000202_Id"
+            }
+          }
+        ],
+        "Filter": {
+          "AND": [
+            {
+              "Field": {
+                "name": "Domain_Id",
+                "operator": "EQUALS",
+                "descendants": false,
+                "value": "e6724e61-5375-49a4-b50c-d719bc0c9230"
+              }
+            }
+          ]
+        },
+        "Order": [
+          {
+            "Field": {
+              "name": "DisplayName",
+              "order": "ASC"
+            }
+          }
+        ]
+      }
+    },
+    "Columns": [
+      {
+        "Column": {
+          "fieldName": "DisplayName",
+          "label": "Business Term Name"
+        }
+      },
+      {
+        "Group": {
+          "name": "StringAttribute_00000000-0000-0000-0000-000000000202",
+          "Columns": [
+            {
+              "Column": {
+                "fieldName": "StringAttribute_00000000-0000-0000-0000-000000000202_Value",
+                "label": "Business Term Definition"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Column": {
+          "fieldName": "Status_Name",
+          "label": "Business Term Status"
+        }
+      },
+      {
+        "Group": {
+          "name": "TargetRelation_00000000-0000-0000-0000-000000007008",
+          "Columns": [
+            {
+              "Column": {
+                "fieldName": "TargetRelation_00000000-0000-0000-0000-000000007008_Source_DisplayName",
+                "label": "KPI Pillars for Business Terms"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Group": {
+          "name": "TargetRelation_00000000-0000-0000-0000-000000007007",
+          "Columns": [
+            {
+              "Column": {
+                "fieldName": "TargetRelation_00000000-0000-0000-0000-000000007007_Source_DisplayName",
+                "label": "Data Domain for Business Terms"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Group": {
+          "name": "SourceRelation_00000000-0000-0000-0000-000000007038",
+          "Columns": [
+            {
+              "Column": {
+                "fieldName": "SourceRelation_00000000-0000-0000-0000-000000007038_Target_DisplayName",
+                "label": "Columns for business terms"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
