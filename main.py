@@ -29,15 +29,15 @@ def generateResponse(dataFrame,prompt):
         answer = pandas_agent.chat(prompt)
         return answer
 
-st.write("# Talk with Novelis's Business Glossary")
-st.write("##### Engage in insightful conversations with your Glossary, empowering you to uncover valuable insights and make informed decisions effortlessly!")
+st.write("# Collibra AI")
+st.write("##### Engage in insightful conversations with your Data Catalog, empowering you to uncover valuable insights and make informed decisions effortlessly!")
 with st.sidebar:
         st.write("Made with Gemini pro and pandas ai.")
         st.write("<div>Developed by - <span style=\"color: cyan; font-size: 24px; font-weight: 600;\">Sayan Sutradhar</span></div>",unsafe_allow_html=True)
 
 df = fetch_data()
 if df is not None:
-        with st.expander("Preview of the Glossary"):
+        with st.expander("Asset Type"):
                 st.write(df.head())
                         
         user_input = st.text_area("Type your message here",placeholder="Ask me about your data")
